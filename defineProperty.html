@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var obj = {};
+    Object.defineProperty(obj,'school',{
+        configurable:false,//可配置主要是可以通过delete删除
+        // writable:true,//可覆盖可重写
+        enumerable:true,//可枚举的
+        // value:'sun',
+        get(){//获取obj.school的值时会调用get方法
+        },//如果添加get和set是不能添加writable和value的
+        set(val){
+            console.log(val);
+        }
+    })
+    obj.school = 'sunch'
+    // console.log(obj.school);
+
+    // 使用该特性实现数据劫持
+</script>
+</html>
